@@ -7,14 +7,15 @@ renderGalleryMarkup();
 function createGalleryMarkup() {
   return galleryItems.reduce(
     (acc, { preview, original, description }) =>
-      (acc += `
-  <a class="gallery__item" href="${original}">
+      (acc += `<li class ="gallery__elem">
+  <a class="gallery__item" href="${original}"> 
     <img
       class="gallery__image"
       src="${preview}"
       alt="${description}"
     />
-  </a>`),
+  </a>
+   </li>`),
     ""
   );
 }
